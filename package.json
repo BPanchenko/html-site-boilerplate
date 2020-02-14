@@ -1,0 +1,38 @@
+{
+	"name": "rocks.protosite.template",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"debug": "run-p watch-css start-server",
+		"build:css-main": "postcss ./design/main.css --output ./assets/resources/design.css --config ./.config/postcss.config.cjs --verbose",
+		"build:css-document": "postcss ./design/document.css --output ./assets/resources/document.css --config ./.config/postcss.config.cjs --verbose",
+		"build:html": "posthtml --config ./.config/posthtml.config.cjs",
+		"start-server": "node server.mjs",
+		"watch-css": "run-p build:css-document build:css-main build:html -- --watch"
+	},
+	"devDependencies": {
+		"@bpanchenko/uikit": "*",
+		"htmlnano": "*",
+		"lodash": "*",
+		"npm-run-all": "*",
+		"port-authority": "*",
+		"postcss-cli": "*",
+		"posthtml": "*",
+		"posthtml-beautify": "*",
+		"posthtml-cli": "*",
+		"posthtml-include": "*",
+		"posthtml-noopener": "*",
+		"purgecss": "*",
+		"terser": "*"
+	},
+	"dependencies": {
+		"express": "*",
+		"livereload": "*"
+	},
+	"author": {
+		"name": "Boris Panchenko",
+		"email": "boris.v.panchenko@mail.ru",
+		"url": "https://bpanchenko.ru"
+	}
+}

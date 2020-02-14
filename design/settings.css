@@ -1,0 +1,9 @@
+@import url("http://assets.protosite.rocks/fonts/itc-franklin-gothic/stylesheet.css");
+
+:root {
+	--caption-font: 'ITCFranklinGothicWebMedium', sans-serif;
+}
+
+body {
+	--bg-color: var(--clr-grey-50);
+}
